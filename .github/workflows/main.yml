@@ -7,7 +7,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run build script
-        run: echo "test output" > .dotfile
+        run: | 
+          echo "test output" > .dotfile
+          ls -lah
+          cat .dotfile
         shell: bash
       - name: Create Zip Package for Octopus Deploy
       # You may pin to the exact commit or the version.
