@@ -37,6 +37,6 @@ jobs:
         with:
           # A multi-line list of packages to push to Octopus Deploy.
           packages: ./pack/output.1.0.0.zip
-          api_key: API-XXX
+          api_key: API-BX4JZXS8I9SBFG8AV4Z4ILTNFJOP4GR
           server: https://benpearce.testoctopus.app
           space: cli demo
