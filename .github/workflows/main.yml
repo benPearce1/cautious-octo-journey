@@ -37,6 +37,6 @@ jobs:
         with:
           # A multi-line list of packages to push to Octopus Deploy.
           packages: ./pack/output.1.0.${{github.run_number}}.zip
-          api_key: ${{ api_key }}
+          api_key: ${{ secrets.API_KEY }}
           server: https://benpearce.testoctopus.app
           space: cli demo
