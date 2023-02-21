@@ -33,7 +33,7 @@ jobs:
       - name: Push Package to Octopus Deploy
           # You may pin to the exact commit or the version.
           # uses: OctopusDeploy/push-package-action@b74e803857cf8d3807862d2cb2228b1572ccfcbe
-        uses: OctopusDeploy/push-package-action@91272d96d0464bce0f9b7bf61ab50bd6dae6b508
+        uses: OctopusDeploy/push-package-action@v3.0.3
         with:
           # A multi-line list of packages to push to Octopus Deploy.
           packages: ./pack/output.1.0.0.zip
