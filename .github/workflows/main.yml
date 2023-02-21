@@ -21,7 +21,7 @@ jobs:
         #uses: OctopusDeploy/create-zip-package-action@v3
         with:
           package_id: output
-          version: 1.0.0
+          version: 1.0.${{github.run_number}}
           output_folder: ./pack
           base_path: .
           files: |
@@ -36,7 +36,7 @@ jobs:
         uses: OctopusDeploy/push-package-action@v3.0.3
         with:
           # A multi-line list of packages to push to Octopus Deploy.
-          packages: ./pack/output.1.0.0.zip
-          api_key: API-BX4JZXS8I9SBFG8AV4Z4ILTNFJOP4GR
+          packages: ./pack/output.1.0.${{github.run_number}}.zip
+          api_key: ${{ api_key }}
           server: https://benpearce.testoctopus.app
           space: cli demo
