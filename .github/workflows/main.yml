@@ -17,7 +17,7 @@ jobs:
         shell: bash
       - name: Create Zip Package for Octopus Deploy
       # You may pin to the exact commit or the version.
-        uses: OctopusDeploy/create-zip-package-action@06107900912e6dc6be9a56f4340cd54a8024c61a
+        uses: OctopusDeploy/create-zip-package-action@v3
         #uses: OctopusDeploy/create-zip-package-action@v3
         with:
           package_id: output
@@ -33,7 +33,7 @@ jobs:
       - name: Push Package to Octopus Deploy
           # You may pin to the exact commit or the version.
           # uses: OctopusDeploy/push-package-action@b74e803857cf8d3807862d2cb2228b1572ccfcbe
-        uses: OctopusDeploy/push-package-action@fix/url-encoding
+        uses: OctopusDeploy/push-package-action@v3
         with:
           # A multi-line list of packages to push to Octopus Deploy.
           packages: ./pack/output.1.0.${{github.run_number}}.zip
