@@ -40,3 +40,4 @@ jobs:
           api_key: ${{ secrets.API_KEY }}
           server: https://benpearce.testoctopus.app
           space: cli demo
+          overwrite_mode: OverwriteExisting
