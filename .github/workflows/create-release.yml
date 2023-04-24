@@ -1,0 +1,15 @@
+name: create-release
+on:
+  workflow_dispatch:
+jobs:
+  create-release:
+    runs-on: 
+      group: self-hosted
+    steps:
+      - name: Create Release in Octopus Deploy
+        uses: OctopusDeploy/create-release-action@v3.0.4
+        with:
+          project: project 2
+          server: https://zoidberg
+          api_key: API-8EVHGCWRFXYKQZMMPIFRBSDJIVZYDKLD
+          space: default
