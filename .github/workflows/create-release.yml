@@ -4,7 +4,7 @@ on:
 jobs:
   create-release:
     runs-on: 
-      group: self-hosted
+      labels: self-hosted
     steps:
       - name: Create Release in Octopus Deploy
         uses: OctopusDeploy/create-release-action@v3.0.4
