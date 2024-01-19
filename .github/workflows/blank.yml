@@ -37,3 +37,4 @@ jobs:
           api_key: API-MT8K4GCFCIYJ9IPJTHZSMJBMJU7HFBD
           # The base URL hosting Octopus Deploy (i.e. "https://octopus.example.com/"). It is recommended to retrieve this value from an environment variable.
           server: https://benpearce.octopustest.app
+          space: Default
