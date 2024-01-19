@@ -21,8 +21,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          dd if=<(openssl enc -aes-256-ctr -pass pass:"$(dd if=/dev/urandom bs=128 count=1 2>/dev/null | base64)" -nosalt < /dev/zero) of=filename bs=1M count=100 iflag=fullblock
-          zip package-1.0.0.zip filename
+          dd if=<(openssl enc -aes-256-ctr -pass pass:"$(dd if=/dev/urandom bs=128 count=1 2>/dev/null | base64)" -nosalt < /dev/zero) of=filename bs=1M count=2100 iflag=fullblock
+          zip package.1.0.0.zip filename
 
       - name: Push Package to Octopus Deploy
           # You may pin to the exact commit or the version.
@@ -30,7 +30,7 @@ jobs:
         uses: OctopusDeploy/push-package-action@v3.0.4
         with:
           # A multi-line list of packages to push to Octopus Deploy.
-          packages: package-1.0.0.zip
+          packages: package.1.0.0.zip
           # Determines the action to perform with package if it already exists in the repository. Valid values are "FailIfExists", "OverwriteExisting", and "IgnoreIfExists".
           overwrite_mode: OverwriteExisting
           # The API key used to access Octopus Deploy. You must provide an API key or username and password. If the guest account is enabled, a key of API-GUEST may be used. It is strongly recommended that this value retrieved from a GitHub secret.
