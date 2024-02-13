@@ -1,0 +1,46 @@
+step "run-a-script" {
+    name = "Run a Script"
+
+    action {
+        action_type = "Octopus.Script"
+        properties = {
+            Octopus.Action.Script.ScriptBody = "echo \"hello\""
+            Octopus.Action.Script.ScriptSource = "Inline"
+            Octopus.Action.Script.Syntax = "Bash"
+        }
+        worker_pool = "default-worker-pool"
+
+        packages "octopus_TestWebApp2_TestWebApp2" {
+            acquisition_location = "Server"
+            feed = "arty"
+            package_id = "com/octopus/TestWebApp2/TestWebApp2"
+            properties = {
+                Extract = "True"
+                Purpose = ""
+                SelectionMode = "immediate"
+            }
+        }
+
+        packages "itau-up2-app-argo-trunk" {
+            acquisition_location = "Server"
+            feed = "arty-2"
+            package_id = "itau-up2-app-argo-trunk/itau-up2-app-argo-trunk"
+            properties = {
+                Extract = "True"
+                Purpose = ""
+                SelectionMode = "immediate"
+            }
+        }
+
+        packages "itau-ar2-app" {
+            acquisition_location = "Server"
+            feed = "arty-2"
+            package_id = "itau-ar2-app/itau-ar2-app"
+            properties = {
+                Extract = "True"
+                Purpose = ""
+                SelectionMode = "immediate"
+            }
+        }
+    }
+}
