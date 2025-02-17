@@ -1,10 +1,8 @@
-variable "default-channel-var" {
+variable "variable" {
     value "#{Octopus.Channel.Name}" {
         channel = ["default"]
     }
-}
 
-variable "second-channel-var" {
     value "#{Octopus.Channel.Name}" {
         channel = ["second-channel"]
     }
