@@ -1,9 +1,9 @@
 variable "variable" {
-    value "#{Octopus.Channel.Name}" {
+    value "#{Octopus.Release.Channel.Name}" {
         channel = ["default"]
     }
 
-    value "#{Octopus.Channel.Name}" {
+    value "#{Octopus.Release.Channel.Name}" {
         channel = ["second-channel"]
     }
 }
