@@ -1,0 +1,9 @@
+variable "OctopusPrintVariables" {
+    value "true" {
+        process = ["deployment-process"]
+    }
+
+    value "false" {
+        process = ["runbook/runbook"]
+    }
+}
