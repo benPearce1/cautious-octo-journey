@@ -22,12 +22,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Login to Octopus Deploy
-      uses: OctopusDeploy/login@v1.0.1
+      uses: OctopusDeploy/login@v2
       with:
         server: https://cadets.testoctopus.app/
         service_account_id: cb4369f3-75bc-468d-abc7-3d09d858da16
     - name: Run Runbook in Octopus Deploy
-      uses: OctopusDeploy/run-runbook-action@v3.0.3
+      uses: OctopusDeploy/run-runbook-action@v4
       with:
         project: runbooks
         runbook: asdf
