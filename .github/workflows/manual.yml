@@ -25,9 +25,7 @@ jobs:
         # The URL of the Octopus Instance (e.g. "https://octopus.example.com/").
         server: https://cadets.testoctopus.app/
         # The id of the service account when using OpenID Connect to login. It is strongly recommended that this value retrieved from a GitHub secret.
-        service_account_id: # optional
-        # The key when using API key login. It is strongly recommended that this value retrieved from a GitHub secret.
-        api_key: # optional
+        service_account_id: cb4369f3-75bc-468d-abc7-3d09d858da16
     - name: Run Runbook in Octopus Deploy
       # You may pin to the exact commit or the version.
       # uses: OctopusDeploy/run-runbook-action@c35c25d435fae32d3b77484ca49352e815adf8d3
